@@ -1,4 +1,4 @@
-import { trigger, transition, state, animate, style, keyframes, useAnimation, query } from '@angular/animations';
+import { trigger, transition, state, animate, style, keyframes, useAnimation, query, animateChild } from '@angular/animations';
 import { fade, slide, bounceOutLeftAnimation, fadeInAnimation } from './../animations';
 import { Component } from '@angular/core';
 
@@ -12,7 +12,8 @@ import { Component } from '@angular/core';
         query('h1', [
           style({ transform: 'translateY(-20px)' }),
           animate(1000)
-        ])
+        ]),
+        query('@todoAnimation', animateChild())
       ])
     ]),
 

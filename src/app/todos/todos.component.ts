@@ -1,5 +1,5 @@
 import { trigger, transition, state, animate, style, keyframes, useAnimation } from '@angular/animations';
-import { fade, slide, bounceOutLeftAnimation } from './../animations';
+import { fade, slide, bounceOutLeftAnimation, fadeInAnimation } from './../animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,15 +9,17 @@ import { Component } from '@angular/core';
   animations: [
     trigger('todoAnimation', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate(2000)
+        useAnimation(fadeInAnimation, {
+          params: {
+            duration: '500ms'
+          }
+        })
       ]),
       transition(':leave', [
         style({ backgroundColor: 'red' }),
         animate(1000),
         useAnimation(bounceOutLeftAnimation)
       ]),
-
     ])
   ]
 })

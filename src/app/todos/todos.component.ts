@@ -29,8 +29,8 @@ import { Component } from '@angular/core';
         })
       ]),
       transition(':leave', [
-        style({ backgroundColor: 'red' }),
-        animate(1000),
+        style({ backgroundColor: '#ef5350' }),
+        animate(500),
         useAnimation(bounceOutLeftAnimation)
       ]),
     ])

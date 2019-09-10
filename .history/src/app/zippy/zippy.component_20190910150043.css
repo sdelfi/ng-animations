@@ -15,8 +15,8 @@
   overflow: hidden;
 }
 
-.zippy-body ::ng-deep > :last-child {
-  margin-bottom: 0!important;
+.zippy-body *:last-child {
+  margin-bottom: 0;
 }
 
 .expanded {

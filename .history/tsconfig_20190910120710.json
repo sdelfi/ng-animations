@@ -7,7 +7,6 @@
     "baseUrl": "src",
     "sourceMap": true,
     "declaration": false,
-    "module": "esnext",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -16,16 +15,9 @@
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2016",
       "dom"
     ],
-    "paths": {
-      "core-js/es7/reflect": [
-        "node_modules/core-js/proposals/reflect-metadata"
-      ],
-      "core-js/es6/*": [
-        "node_modules/core-js/es"
-      ]
-    }
+    "module": "esnext"
   }
 }
